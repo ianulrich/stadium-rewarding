@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
     ports:
-      - "8080:8080"
+      - "8108:8108"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://192.168.3.191:5432/stadium_rewarding
       - SPRING_DATASOURCE_USERNAME=postgres
