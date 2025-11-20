@@ -1,16 +1,24 @@
-# Dockerfile – Stadium Rewarding App
+# Stage 1: Build the JAR
 FROM eclipse-temurin:17-jdk AS builder
-
 WORKDIR /app
-COPY pom.xml .
-COPY src ./src
 
-# Build the JAR (this creates target/stadium-rewarding.jar)
+# Copy Maven files first (for better caching)
+COPY pom.xml .
+COPY mvnw mvnw.cmd ./
+COPY .mvn .mvn
+
+# Make mvnw executable
+RUN chmod +x mvnw
+
+# Copy source code and build JAR
+COPY src ./src
 RUN ./mvnw clean package -DskipTests
 
-# Final stage – small runtime image
-FROM eclipse-temurin:17-jdk
+# Stage 2: Runtime image (smaller)
+FROM eclipse-temurin:17-jre
 WORKDIR /app
+
+# Copy the built JAR from builder stage
 COPY --from=builder /app/target/stadium-rewarding.jar app.jar
 
 EXPOSE 8108
