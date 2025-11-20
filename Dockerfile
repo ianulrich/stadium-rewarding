@@ -1,14 +1,11 @@
 # Dockerfile – Stadium Rewarding App
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
-# Create app directory
 WORKDIR /app
 
-# Copy the built JAR (from target folder)
+# Copy the JAR
 COPY target/stadium-rewarding.jar app.jar
 
-# Expose port
 EXPOSE 8108
 
-# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
