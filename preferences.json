@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "phone": "123-456-7890",
+        "occupationCode": "STU",
+        "standName": "EAST",
+        "reservationTime": "2024-04-11 08:00:00"
+    },
+    {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@example.com",
+        "phone": "987-654-3210",
+        "occupationCode": "EDU",
+        "standName": "WEST",
+        "reservationTime": "2024-04-11 09:00:00"
+    }
+]

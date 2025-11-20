@@ -1,0 +1,26 @@
+[
+    {
+        "name": "EAST",
+        "availableSeats": 3,
+        "discountPrice": 10.00,
+        "reservedSeats": ["E001", "E002", "E003"]
+    },
+    {
+        "name": "WEST",
+        "availableSeats": 3,
+        "discountPrice": 5.00,
+        "reservedSeats": ["W501", "W502", "W503"]
+    },
+    {
+        "name": "SOUTH",
+        "availableSeats": 5,
+        "discountPrice": 2.00,
+        "reservedSeats": ["S101", "S102", "S103", "S104", "S105"]
+    },
+    {
+        "name": "NORTH",
+        "availableSeats": 5,
+        "discountPrice": 2.00,
+        "reservedSeats": ["N601", "N602", "N603", "N604", "N605"]
+    }
+]
